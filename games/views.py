@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.models import User
-from django.core.urlresolvers import reverse
+#from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.http import Http404
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -266,3 +267,7 @@ class AttackView(View):
         else:
             messages.warning(request, 'You must be logged in to do that.')
             return HttpResponseRedirect('/login')
+
+#    as_view = post
+
+

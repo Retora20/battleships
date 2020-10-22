@@ -27,7 +27,7 @@ SECRET_KEY = '(olp(&(6zgch!fc!h&5svqcnm*$ihhp!+pgj*^pvfu6!t_xq5f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -51,16 +51,28 @@ LOCAL_APPS = (
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-MIDDLEWARE_CLASSES = (
+#MIDDLEWARE_CLASSES = (
+#    'django.contrib.sessions.middleware.SessionMiddleware',
+#    'django.middleware.common.CommonMiddleware',
+#    'django.middleware.csrf.CsrfViewMiddleware',
+#    'django.contrib.auth.middleware.AuthenticationMiddleware',
+#    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+#    'django.contrib.messages.middleware.MessageMiddleware',
+#    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+#    'django.middleware.security.SecurityMiddleware',
+#)
+
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-)
+]
+
+
 
 ROOT_URLCONF = 'battleships.urls'
 
@@ -94,12 +106,24 @@ WSGI_APPLICATION = 'battleships.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
+#    }
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_ROOT, 'db.sqlite3'),
-    }
-}
+     "default": {
+         "ENGINE": "django.db.backends.mysql",
+         "NAME": "battleships",
+         "USER": "root",
+#         "PASSWORD": "2dMh1Zyy&i>O",
+         "PASSWORD": "12345",
+         "HOST": "localhost",
+         "PORT": "3306"
+     }
+ }
 
 
 # Internationalization
@@ -123,8 +147,11 @@ STATIC_ROOT = '{0}/static'.format(PROJECT_ROOT)
 MEDIA_ROOT = '{0}/media'.format(PROJECT_ROOT)
 
 # The URL that handles the media, static, etc.
-STATIC_URL = '/static/'
-MEDIA_URL = STATIC_URL + 'media/'
+#STATIC_URL = '/static/'
+#MEDIA_URL = STATIC_URL + 'media/'
+
+STATIC_URL = '/static/static/'
+MEDIA_URL = '/static/media/'
 
 STATICFILES_DIRS = (
     '{0}/static_assets'.format(PROJECT_ROOT),
