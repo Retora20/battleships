@@ -22,8 +22,10 @@ class HomeView(View):
     def get(self, request, *args, **kwargs):
         context = {}
 #        if request.user.is_authenticated():
-        if request.user.is_authenticated:
-            player = Player.objects.get(user=request.user)
+        if request.user.is_authenticated: 
+            if Player.objects.get(user=request.user):
+                player = Player.objects.get(user=request.user)
+
             teams = Team.objects.filter(player=player)
             context['games'] = [
                 GamePresenter.from_game(team.game)

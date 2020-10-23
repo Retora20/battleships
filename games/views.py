@@ -30,7 +30,7 @@ class GameView(View):
         except Game.DoesNotExist:
             raise Http404("Game does not exist")
 
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             player = Player.objects.get(user=request.user)
             teams = game.teams.all()
 
@@ -79,7 +79,7 @@ class CreateGameView(View):
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             form = CreateGameForm(request.POST, max_players=MAX_PLAYERS)
             if form.is_valid():
                 opponent_usernames = []
@@ -158,7 +158,7 @@ class CreateGameView(View):
 class AttackView(View):
 
     def post(self, request, game_id, *args, **kwargs):
-        if request.user.is_authenticated():
+        if request.user.is_authenticated:
             try:
                 game = Game.objects.get(pk=game_id)
             except Game.DoesNotExist:
