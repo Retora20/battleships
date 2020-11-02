@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ca3b2218-1421-427b-80b7-4c394e69e7d2}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <DjangoSettingsModule>battleships.settings</DjangoSettingsModule>
+    <WebBrowserPort>8000</WebBrowserPort>
+    <PythonRunWebServerCommandType />
+    <PythonDebugWebServerCommandType />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="static_assets\css\style.css" />
+    <Content Include="static_assets\js\app.js" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\css\bootstrap-theme.css" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\css\bootstrap-theme.min.css" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\css\bootstrap.css" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\css\bootstrap.min.css" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\js\bootstrap.js" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\js\bootstrap.min.js" />
+    <Content Include="static_assets\libs\bootstrap-3.3.5\js\npm.js" />
+    <Content Include="static_assets\libs\jquery\2.1.0\jquery-2.1.0.js" />
+    <Content Include="static_assets\libs\jquery\2.1.0\jquery-2.1.0.min.js" />
+    <Content Include="templates\base\base.html" />
+    <Content Include="templates\base\home.html" />
+    <Content Include="templates\base\login.html" />
+    <Content Include="templates\base\signup.html" />
+    <Content Include="templates\games\attack_form.html" />
+    <Content Include="templates\games\create_game.html" />
+    <Content Include="templates\games\game.html" />
+    <Content Include="templates\games\opponent_board.html" />
+    <Content Include="templates\games\player_board.html" />
+    <Content Include="templates\players\player_profile.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="base\forms.py" />
+    <Compile Include="base\tests\test_views.py" />
+    <Compile Include="base\tests\__init__.py" />
+    <Compile Include="base\urls.py" />
+    <Compile Include="base\views.py" />
+    <Compile Include="base\__init__.py" />
+    <Compile Include="battleships\settings.py" />
+    <Compile Include="battleships\urls.py" />
+    <Compile Include="battleships\wsgi.py" />
+    <Compile Include="battleships\__init__.py" />
+    <Compile Include="games\admin.py" />
+    <Compile Include="games\forms.py" />
+    <Compile Include="games\migrations\0001_initial.py" />
+    <Compile Include="games\migrations\__init__.py" />
+    <Compile Include="games\models.py" />
+    <Compile Include="games\presentation.py" />
+    <Compile Include="games\templatetags\attack_form.py" />
+    <Compile Include="games\templatetags\game_board.py" />
+    <Compile Include="games\tests\test_models.py" />
+    <Compile Include="games\tests\test_presentation.py" />
+    <Compile Include="games\tests\test_util.py" />
+    <Compile Include="games\tests\test_views.py" />
+    <Compile Include="games\tests\__init__.py" />
+    <Compile Include="games\urls.py" />
+    <Compile Include="games\util.py" />
+    <Compile Include="games\views.py" />
+    <Compile Include="games\__init__.py" />
+    <Compile Include="manage.py" />
+    <Compile Include="players\admin.py" />
+    <Compile Include="players\forms.py" />
+    <Compile Include="players\migrations\0001_initial.py" />
+    <Compile Include="players\migrations\__init__.py" />
+    <Compile Include="players\models.py" />
+    <Compile Include="players\presentation.py" />
+    <Compile Include="players\tests\test_models.py" />
+    <Compile Include="players\tests\test_presentation.py" />
+    <Compile Include="players\tests\test_views.py" />
+    <Compile Include="players\tests\__init__.py" />
+    <Compile Include="players\urls.py" />
+    <Compile Include="players\views.py" />
+    <Compile Include="players\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="base" />
+    <Folder Include="base\tests" />
+    <Folder Include="battleships" />
+    <Folder Include="games" />
+    <Folder Include="games\migrations" />
+    <Folder Include="games\templatetags" />
+    <Folder Include="games\tests" />
+    <Folder Include="players" />
+    <Folder Include="players\migrations" />
+    <Folder Include="players\tests" />
+    <Folder Include="static_assets\" />
+    <Folder Include="static_assets\css" />
+    <Folder Include="static_assets\js" />
+    <Folder Include="static_assets\libs\" />
+    <Folder Include="static_assets\libs\bootstrap-3.3.5\" />
+    <Folder Include="static_assets\libs\bootstrap-3.3.5\css" />
+    <Folder Include="static_assets\libs\bootstrap-3.3.5\fonts" />
+    <Folder Include="static_assets\libs\bootstrap-3.3.5\js" />
+    <Folder Include="static_assets\libs\jquery\" />
+    <Folder Include="static_assets\libs\jquery\2.1.0" />
+    <Folder Include="templates\" />
+    <Folder Include="templates\base" />
+    <Folder Include="templates\games" />
+    <Folder Include="templates\players" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Description>env (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <Version>0.0</Version>
+      <Architecture>X64</Architecture>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

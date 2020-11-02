@@ -9,9 +9,10 @@
         <h3>{{ team.player.username }}'s board{% if team.winner %} - Winner!{% elif not team.alive %} - defeated{% endif %}</h3>
         <div class="well">
             {% if team.player.user == request.user %}
-                {% render_player_board team %}
+              {% render_player_board team %}
             {% else %}
-                {% render_opponent_board team %}
+              {#{% render_opponent_board team %}#}
+              {% render_player_board team %}
             {% endif %}
         </div>
     </div>
