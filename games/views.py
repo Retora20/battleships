@@ -268,6 +268,5 @@ class AttackView(View):
             messages.warning(request, 'You must be logged in to do that.')
             return HttpResponseRedirect('/login')
 
-#    as_view = post
 
 

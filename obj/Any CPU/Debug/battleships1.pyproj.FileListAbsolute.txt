@@ -1,0 +1,3 @@
+C:\Users\mama\battleships\obj\Any CPU\Debug\battleships1.pyproj.CoreCompileInputs.cache
+C:\Users\mama\battleships\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\mama\battleships\bin\wfastcgi.py
